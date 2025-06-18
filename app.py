@@ -6,14 +6,9 @@ from sklearn.preprocessing import StandardScaler
 
 from src.Pipeline.predict_pipeline import CustomData, PredictPipeline
 
-application = Flask(__name__)
+app = Flask(__name__)
 
-app = application
 
-# Route for home page
-@app.route('/')
-def infex():
-    return render_template('index.html')
 
 @app.route('/predictdata', methods=['GET', 'POST'])
 def predict_datapoint():
